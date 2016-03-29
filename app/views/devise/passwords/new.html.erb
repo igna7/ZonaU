@@ -1,0 +1,18 @@
+<h2 class="tfield">¿Olvidaste tu contraseña?</h2>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="lfield">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, style: "width:450px;", class:"form-styles lfield" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Recuperar contraseña", class:"btn-submit" %>
+  </div>
+<% end %>
+<div class="tlinks">
+	<%= render "devise/shared/links" %>
+</div>
+

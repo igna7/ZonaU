@@ -1,0 +1,36 @@
+<header>
+	<nav>
+		<div class="no-list row center-xs large-ads middle-xs">
+			<div class="col-xs">
+				<p>Accese a todo nuestro contenido y disfruta de nuestra revista digital gratis por tiempo limitado.</p>
+			</div>
+		</div>
+	</nav>
+	<nav class="be-purple">
+		<ul class="no-list row center-xs blue-padding middle-xs">
+			<li class="col-xs">
+				<h2 class="no-margin"><%= link_to "ZONA UNIVERSITARIA", root_path %> </h2>
+			</li>
+		</ul>
+		<ul class="no-list row center-xs large-padding middle-xs">
+			<li class="col-xs menu">
+				<%= link_to "Inicio", root_path %> 
+			</li>
+			<li class="col-xs menu">
+				<%= link_to "Blog", articles_path %> 
+			</li>
+			<li class="col-xs menu">
+				Revista
+			</li>
+			<% if user_signed_in? %>
+				<li class="col-xs login">
+					<%= link_to "Salir", destroy_user_session_path, method: :delete %>
+				</li>
+			<% else %>
+				<li class="col-xs login">
+					<%= link_to "Login", new_user_session_path %>
+				</li>
+			<%end%>
+		</ul>
+	</nav>
+</header>

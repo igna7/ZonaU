@@ -1,0 +1,26 @@
+<%= form_for(@article) do |f| %>
+	<% @article.errors.full_messages.each do |message| %>
+		<div class="message-errors space">
+			* <%= message %>
+		</div>
+	<%end%>
+	<div class="imgfield">
+		<h3>Sube una imagen para tu articulo:<h/3>
+			<div><%= f.file_field :cover %></div>
+	</div>
+	<div class="field">
+		<%= f.text_field :title, placeholder: "Título", style: "height:50px;", class:"form-styles" %>
+	</div>
+	<div class="field">
+		<%= f.text_area :body, placeholder: "Escribe aquí tu articulo", style: "height:250px;", class:"form-styles" %>
+	</div>
+	<div class="cfield">
+		<h3>Selecciona una categoría</h3>
+		<% @categories.each do |category| %>
+			<div>
+				<%= check_box_tag "categories[]" ,category.id %><%= category.name%>
+			</div>
+		<%end%>
+	</div>
+	<%= f.submit "Publicar", class:"btn-submit" %>
+<%end%>

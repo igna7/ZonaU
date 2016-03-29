@@ -1,0 +1,13 @@
+<%= 
+  form_for([@article, @comment], remote: true, html: { id:"comments-form", :"data-type" => 
+  "json"}) do |f| %>
+      <% @comment.errors.full_messages.each do |message| %>
+        <div class="message-errors space"> 
+        * <%= message %>
+        </div>
+      <% end %>
+      <div class="lfield">
+      <%= f.text_area :body, placeholder: "Escribe aquí tu comentario", style: "height:250px;", class:"comments-styles" %>
+      </div>
+      <%= f.submit "Comentar", class:"btn-submit" %>
+<% end %>

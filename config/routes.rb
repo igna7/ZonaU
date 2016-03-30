@@ -8,12 +8,12 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root 'welcome#index'
+  root 'articles#index'
 
   get "/dashboard", to: "welcome#dashboard"
 
   put "articles/:id/publish", to: "articles#publish"
 
   get "/admindashboard", to: "welcome#admindashboard"
-  
+
 end

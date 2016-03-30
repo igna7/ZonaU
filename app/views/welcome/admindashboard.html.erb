@@ -2,11 +2,11 @@
 <div class="container-fluid">
 	<div class="row rejilla">
 		<div class="field bottom-space">
-			<div class="comments-styles col-xs-12">
-			<h1 class="ctfield">Artículos </h1>
+			<h1 class="ctfield col-xs-12">Artículos </h1>
 				<% @articles.each do |article| %>
 				<h1 class="col-xs-12"><%= link_to article.title, article %></h1>
 					<div class="bottom-space">
+						<div class="col-xs-12"><h4>Escrito por: <%= article.user.email%></h4></div>
 						<div class="col-xs-12"><%= article.body %></div> <div class="col-xs-12 top-space"><%= link_to "Eliminar", article, method: :delete, class:"red"%>
 			      - <%= link_to "Editar", "articles/#{article.id}/edit", method: :get, class:"blue"%>
 			      <% if article.may_publish? %>
@@ -14,10 +14,6 @@
 			      <%end%></div>
 					</div>
 				<%end%>
-			</div>
-			<div class="comments-styles col-xs-12">
-			<h1 class="ctfield">Comentarios</h1>
-			</div>
 		</div>
 		</div>
 	</div>

@@ -15,6 +15,10 @@ class Article < ActiveRecord::Base
 	has_attached_file :cover, styles: {medium: "1280x720", thumb:"400x200"}
 	validates_attachment_content_type :cover, content_type: /\Aimage\/.*\Z/
 
+	scope :publicados, ->{where(state: "published")}
+
+	scope :ultimos, ->{order("created_at DESC").limit(10)}
+
 	def categories=(value)
 		@categories = value
 	end

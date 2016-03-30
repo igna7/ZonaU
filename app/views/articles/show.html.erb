@@ -1,34 +1,25 @@
-<div class="coverfield">
-		<%= image_tag @article.cover.url(:medium) %>
+<article class="bottom-space">
+	<div class="row center-xs sin-margen">
+		<div class="col-xs-12 col-md-9 no-padding">
+			<%= article_cover @article.cover.url %>
+		</div>
+		<div class="col-xs-10 light-border col-md-9">
+			<h1 class="be-big blue"><%= @article.title %></h1>
+			<p class="be-small text-right">
+				<%= link_to "Atras", articles_path, class:"underline"%> -
+			<span class="red">
+				<%= @article.visits_count %> visita(s)
+			</span> -
+			<% unless @article.user.nil? %>
+			Escrito por: <%= @article.user.email%>
+			<%end%>
+			</p>
+			<div class="text-justify">
+				<%= @article.body %>
+			</div>
+			<div class="top-space">
+				<%= render "articles/comments" %>
+			</div>
+		</div>
 	</div>
-<div class="field">
-<h1><%= @article.title %></h1>
-<% unless @article.user.nil? %>
-<p>
-	Escrito por: <%= @article.user.email%>
-</p>
-<%end%>
-	<% @article.categories.each do |category| %>
-		<%= link_to category.name, category , style:"color:#{category.color};"%>
-	<%end%>
-<p>
-	Visitas: <%= @article.visits_count %>
-</p>
-<div>
-	<%= @article.body %>
-</div>
-</div>
-<div class="field">
-	<h3>Comentarios</h3>
-	<ul id="comments-box">
-		<% @article.comments.each do |comment| %>
-		<li>
-			<%= comment.body %> - <%= comment.user.email%>
-		</li>
-		<%end%>
-	</ul>
-	<%= render "comments/form" %>
-</div>
-<div>
-<%= link_to "Editar", edit_article_path(@article) %>
-</div>
+</article>

@@ -6,7 +6,7 @@ class Article < ActiveRecord::Base
 	has_many :has_categories
 	has_many :categories, through: :has_categories
 
-	validates :title, presence: true, uniqueness: true
+	validates :title, presence: true, uniqueness: true, length: { maximum: 60 }
 	validates :body, presence: true, length: { minimum: 100 }
 	validates :cover, presence: true
 	before_create :set_visits_count

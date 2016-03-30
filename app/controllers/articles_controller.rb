@@ -46,6 +46,10 @@ class ArticlesController < ApplicationController
 		end
 	end
 
+	def publish
+		@article.publish!
+		redirect_to @article
+	end
 	private
 
 	def set_article

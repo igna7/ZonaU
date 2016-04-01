@@ -30,11 +30,6 @@ a,a:visited {
 .large-ads{
 	background: #fff;
 	font-size: 14px;
-	margin: 0px;
-	margin-bottom: 10px;
-	color: black;
-	font-weight: bold;
-	height: 30px;
 }
 .space-ads{
 	background: #fff;
@@ -44,6 +39,7 @@ a,a:visited {
 	background: #005393;
 	padding: 15px;
 	margin: 0px;
+	color:white;
 }
 .coverfield{
 	width: 100%;
@@ -283,4 +279,20 @@ a,a:visited {
 }
 .no-padding{
 	padding-right: 0px;
+}
+.menu{
+  padding: 15px;
+}
+.be-strong{
+  font-weight: bold;
+}
+.space-bar{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
 }

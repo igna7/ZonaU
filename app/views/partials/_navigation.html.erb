@@ -1,38 +1,20 @@
 <header>
-	<div class="no-list row center-xs large-ads middle-xs">
-		<div class="col-xs-12">
-			<p>Si eres estudiante, somos la comunidad perfecta para ti.</p>
-		</div>
-	</div>
-	<nav class="be-purple">
-		<ul class="no-list row center-xs blue-padding middle-xs">
-			<li class="col-xs-12">
-				<h2 class="no-margin"><%= link_to "ZONA UNIVERSITARIA", root_path %> </h2>
-			</li>
-		</ul>
-		<div class="no-list row center-xs space-ads middle-xs">
-			<div class="col-xs-12">
-			</div>
-		</div>
-		<ul class="no-list row center-xs large-padding middle-xs">
-			<li class="col-xs col-md-2 menu">
-				<%= link_to "Inicio", root_path %>
-			</li>
-			<li class="col-xs col-md-2 menu">
-				Eventos
-			</li>
-			<li class="col-xs col-md-2 menu">
-				Revista
-			</li>
-			<% if user_signed_in? %>
-				<li class="col-xs col-md-2 login">
+	<div class="row fullWidth">
+	  <div class="large-5 small-12 columns blue-padding menu be-strong text-center"><%= link_to "ZONA UNIVERSITARIA", root_path %></div>
+	  <div class="large-7 small-12 columns be-purple menu">
+	    <div class="row text-center">
+	      <div class="small-3 columns"><%= link_to "Inicio", root_path %></div>
+	      <div class="small-3 columns">Eventos</div>
+	      <div class="small-3 columns">Revista</div>
+				<% if user_signed_in? %>
+				<li class="small-3 columns no-list">
 					<%= link_to "Salir", destroy_user_session_path, method: :delete %>
 				</li>
 			<% else %>
-				<li class="col-xs col-md-2 login">
+				<li class="small-3 columns no-list">
 					<%= link_to "Login", new_user_session_path %>
 				</li>
 			<%end%>
-		</ul>
-	</nav>
+	  </div>
+	</div>
 </header>

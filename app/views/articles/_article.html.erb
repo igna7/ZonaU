@@ -1,11 +1,11 @@
-<div class="col-xs-12 top-space col-md-4 col-sm-6">
+<div class="small-12 top-space medium-6 large-4 colums post-index">
   <div class="box relative article-height">
     <div class="absolute article-height background-cover" style="background:url(<%=article.cover.url(:thumb)%>);top:0px;left:0px;width:100%;">
     </div>
     <div class="absolute article-height background-cover" style="background:rgba(0,0,0,0.5);top:0px;left:0px;width:100%;">
     </div>
     <div class="relative white text-center imgposition">
-      <h2><%= link_to article.title, article %></h2>
+      <h3><%= link_to article.title, article %></h3>
       <p><%= truncate(article.body, length:50) %></p>
     </div>
   </div>

@@ -28,10 +28,16 @@ a,a:visited {
 	text-decoration: none;
 }
 .large-ads{
-	background: #1D1D1D;
+	background: #fff;
 	font-size: 14px;
 	margin: 0px;
-	color: white;
+	color: black;
+	font-weight: bold;
+	height: 30px;
+}
+.space-ads{
+	background: #fff;
+	height: 2px;
 }
 .blue-padding {
 	background: #005393;

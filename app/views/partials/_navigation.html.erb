@@ -4,11 +4,12 @@
 	  <div class="large-7 small-12 columns be-purple menu">
 	    <div class="row text-center">
 	      <div class="small-3 columns"><%= link_to "Inicio", root_path %></div>
-	      <div class="small-3 columns">Eventos</div>
-	      <div class="small-3 columns">Revista</div>
+	      <div class="small-2 columns">Eventos</div>
+	      <div class="small-2 columns">Revista</div>
 				<% if user_signed_in? %>
-				<li class="small-3 columns no-list">
-					<%= link_to "Salir", destroy_user_session_path, method: :delete %>
+				<li class="small-5 columns no-list">
+					<div class="small-4 columns no-list"><%= link_to "Salir", destroy_user_session_path, method: :delete %></div>
+					<div class="small-8 columns no-list"><%= link_to "Dashboard", dashboard_path %></div>
 				</li>
 			<% else %>
 				<li class="small-3 columns no-list">

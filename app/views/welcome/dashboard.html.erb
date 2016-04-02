@@ -1,9 +1,9 @@
 <h1 class="tfield ctfield">Mis articulos</h1>
-<div class="container-fluid">
-	<div class="row rejilla">
-		<div class="field bottom-space">
+	<div class="row fullWidth">
+		<div class="small-10 large-6 colums btn-submit text-center "><%= link_to "Crear un nuevo articulo", new_article_path %></div>
+		<div class="small-12  colums field bottom-space">
 				<% @current_user.articles.each do |article| %>
-				<h1 class="col-xs-12"><%= link_to article.title, article %></h1>
+				<h1 class="small-12 columns"><%= link_to article.title, article %></h1>
 					<div class="bottom-space">
 						<div class="col-xs-12"><%= truncate(article.body, length:100) %></div> <div class="col-xs-12 top-space">
 			      <%= link_to "Editar", "articles/#{article.id}/edit", method: :get, class:"blue"%>
@@ -14,5 +14,3 @@
 			</div>
 		</div>
 		</div>
-	</div>
-</div>

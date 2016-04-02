@@ -9,7 +9,9 @@
 				<% if user_signed_in? %>
 				<li class="small-5 columns no-list">
 					<div class="small-4 columns no-list"><%= link_to "Salir", destroy_user_session_path, method: :delete %></div>
+					<%if user_signed_in? && current_user.is_autor? %>
 					<div class="small-8 columns no-list"><%= link_to "Dashboard", dashboard_path %></div>
+					<%end%>
 				</li>
 			<% else %>
 				<li class="small-3 columns no-list">

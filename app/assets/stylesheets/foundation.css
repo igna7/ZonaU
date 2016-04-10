@@ -1631,7 +1631,7 @@ select {
     cursor: default; }
   select::-ms-expand {
     display: none; }
-  [multiple] {
+  select[multiple] {
     height: auto; }
 
 .is-invalid-input:not(:focus) {

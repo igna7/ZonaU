@@ -1,13 +1,12 @@
 <h1 class="tfield ctfield">Panel Administrador</h1>
-<div class="container-fluid">
 	<div class="row rejilla">
-		<div class="field bottom-space">
-			<h1 class="ctfield col-xs-12">Artículos </h1>
+		<div class="field bottom-space small-12 columns">
+			<h1 class="ctfield small-12 columns">Artículos </h1>
 				<% @articles.each do |article| %>
-				<h1 class="col-xs-12"><%= link_to article.title, article %></h1>
+				<h1 class="small-12 columns"><%= link_to article.title, article %></h1>
 					<div class="bottom-space">
-						<div class="col-xs-12"><h4>Escrito por: <%= article.user.email%></h4></div>
-						<div class="col-xs-12"><%= truncate(article.body, length:100) %></div> <div class="col-xs-12 top-space"><%= link_to "Eliminar", article, method: :delete, class:"red"%>
+						<div class="small-12 columns"><h4>Escrito por: <%= article.user.email%></h4></div>
+						<div class="small-12 columns"><%= truncate(article.body, length:100) %></div> <div class="col-xs-12 top-space"><%= link_to "Eliminar", "articles/#{article.id}", method: :delete, class:"red"%>
 			      - <%= link_to "Editar", "articles/#{article.id}/edit", method: :get, class:"blue"%>
 			      <% if article.may_publish? %>
 			      - <%= link_to "Publicar", "articles/#{article.id}/publish", method: :put, class:"green"%>
@@ -16,5 +15,3 @@
 				<%end%>
 		</div>
 		</div>
-	</div>
-</div>

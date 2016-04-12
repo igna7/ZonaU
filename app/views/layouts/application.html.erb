@@ -25,6 +25,10 @@
 <div style="<%= "display:none;" if notice.nil? and alert.nil? %>">
   <%= notice %> <%= alert %>
 </div>
+<script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
+
+<input type="filepicker" data-fp-apikey="YOUR_API_KEY"
+onchange="alert(event.fpfile.url)">
 <%= yield %>
 
 </body>

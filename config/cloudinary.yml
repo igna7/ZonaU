@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hiu7lkj22
+  api_key: '638624263516342'
+  api_secret: 4dEwCd0bOXhoLfdBSeAlbf1CPwM
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hiu7lkj22
+  api_key: '638624263516342'
+  api_secret: 4dEwCd0bOXhoLfdBSeAlbf1CPwM
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hiu7lkj22
+  api_key: '638624263516342'
+  api_secret: 4dEwCd0bOXhoLfdBSeAlbf1CPwM
+  enhance_image_tag: true
+  static_image_support: false

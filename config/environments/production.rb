@@ -77,11 +77,4 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   # config/environments/production.rb
-  config.fog_credentials = {
-    :provider => 'AWS'
-    :aws_access_key_id => ENV['S3_ACCESS_KEY']
-    :aws_secret_access_key => ENV['S3_SECRET_KEY']
-    :s3_bucket_name => ENV['S3_BUCKET']
-  }
-  config.fog_directory = ENV['S3_BUCKET']
 end

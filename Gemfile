@@ -25,8 +25,7 @@ gem 'devise'
 gem 'jquery-turbolinks'
 gem 'paperclip'
 gem 'aws-sdk', '< 2.0'
-gem 'fog-aws'
-gem "figaro"
+gem 'fog'
 gem 'aasm'
 gem 'will_paginate'
 

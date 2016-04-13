@@ -24,6 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'jquery-turbolinks'
 gem 'paperclip'
+gem 'fog', '~> 1.38'
 gem 'aasm'
 gem 'will_paginate'
 

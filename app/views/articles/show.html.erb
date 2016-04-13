@@ -1,7 +1,7 @@
 <article class="bottom-space">
 	<div class="row center-xs post-show">
 		<div class="small-11 large-7 columns">
-			<%= image_tag @article.cover.url %>
+			<%= article_cover @article.cover.url %>
 			<h1 class="be-big blue"><%= @article.title %></h1>
 			<p class="be-small text-right">
 				<%= link_to "Atras", articles_path, class:"underline"%> -

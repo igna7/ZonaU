@@ -12,7 +12,11 @@ class Article < ActiveRecord::Base
 	before_create :set_visits_count
 	after_create :save_categories
 
-	has_attached_file :cover, styles: {medium: "1280x720", thumb:"400x200"}
+	if Rails.env.production?
+		has_attached_file :fog, styles: {medium: "1280x720", thumb:"400x200"}
+	else
+		has_attached_file :cover, styles: {medium: "1280x720", thumb:"400x200"}
+	end
 
 	validates_attachment_content_type :cover, content_type: /\Aimage\/.*\Z/
 
